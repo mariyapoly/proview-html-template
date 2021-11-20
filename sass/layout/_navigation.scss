@@ -1,0 +1,185 @@
+/* -----------------------------------
+ --------- navbar css start ----------
+----------------------------------- */
+header {
+    @include position(absolute, 50px, 0);
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    @include for_breakpoint(portrait_phones) {
+        top: 0;
+    }
+    @include for_breakpoint(landscape_phones) {
+        top: 0;
+    }
+    @include for_breakpoint(tablets) {
+        top: 15px;
+    }
+    .navbar {
+        padding: 0;
+        @include for_breakpoint(portrait_phones) {
+           @include al_padding(10px 20px);
+        }
+        @include for_breakpoint(landscape_phones) {
+           @include al_padding(10px 20px);
+        }
+        @include for_breakpoint(tablets) {
+           @include al_padding(10px 20px);
+        }
+        .navbar-toggler {
+            @include for_breakpoint(portrait_phones) {
+                padding: 0;
+             }
+             @include for_breakpoint(landscape_phones) {
+                padding: 0;
+             }
+             
+             @include for_breakpoint(tablets) {
+                padding: 0;
+             }
+             i {
+                @include for_breakpoint(portrait_phones) {
+                    color: #fff;
+                    font-size: 25px;
+                }
+                @include for_breakpoint(landscape_phones) {
+                    color: #fff;
+                    font-size: 25px;
+                }
+                @include for_breakpoint(tablets) {
+                    color: #fff;
+                    font-size: 25px;
+                }
+             }
+        }
+        #navbarSupportedContent {
+            @include for_breakpoint(portrait_phones) {
+                padding: 20px 0;
+                background: $secondary_bg_color;
+                @include margin(top, 10px);
+            }
+            @include for_breakpoint(landscape_phones) {
+                padding: 20px 0;
+                background: $secondary_bg_color;
+                @include margin(top, 10px);
+            }
+            @include for_breakpoint(tablets) {
+                padding: 20px 0;
+                background: $secondary_bg_color;
+                @include margin(top, 10px);
+            }
+        }
+        .navbar-nav {
+            .nav-item {
+                position: relative;
+                .nav-link {
+                    color: $white_color;
+                    @include al_padding(15px 22px);
+                    text-transform: capitalize;
+                    &::before{
+                        @include position_b(absolute, 6px, 0);
+                        right: 0;
+                        @include al_margin(0 auto);
+                        content: '';
+                        @include whb (42px, 1px, $theme_color);
+                        @include border-radius(35px);
+                        opacity: 0;
+                        @include transition(all linear 0.3s);
+                        @include for_breakpoint(portrait_phones) {
+                            left: 0;
+                            margin: 0;
+                        }
+                        @include for_breakpoint(landscape_phones) {
+                            left: 0;
+                            margin: 0;
+                        }
+                        @include for_breakpoint(tablets) {
+                            left: 0;
+                            margin: 0;
+                        }
+                    }
+                    &::after{
+                        @include position_b(absolute, 5px, 0);
+                        right: 0;
+                        content: '';
+                        @include whb (4px, 4px, $theme_color);
+                        @include border-radius(50%);
+                        @include al_margin(0 auto);
+                        opacity: 0;
+                        @include transition(all linear 0.3s);
+                        @include for_breakpoint(portrait_phones) {
+                            left: 20px;
+                            margin: 0;
+                        }
+                        @include for_breakpoint(landscape_phones) {
+                            left: 20px;
+                            margin: 0;
+                        }
+                        @include for_breakpoint(tablets) {
+                            left: 20px;
+                            margin: 0;
+                        }
+                    }
+                    @include for_breakpoint(portrait_phones) {
+                        padding: 10px 0 !important;
+                        display: block;
+                    }
+                    @include for_breakpoint(landscape_phones) {
+                        padding: 10px 0 !important;
+                        display: block;
+                    }
+                    @include for_breakpoint(tablets) {
+                        padding: 10px 0 !important;
+                        display: block;
+                    }
+                }
+                
+                &:hover .nav-link::before {
+                    opacity: 1;
+                }
+                &:hover .nav-link::after {
+                    opacity: 1;
+                }
+            }
+        }
+        .navbar__btn {
+            a {
+                @extend %btn;
+                @include for_breakpoint(portrait_phones) {
+                    @include al_padding(10px 25px);
+                    @include margin(top, 10px);
+                }
+                @include for_breakpoint(landscape_phones) {
+                    @include al_padding(10px 25px);
+                    @include margin(top, 10px);
+                }
+                @include for_breakpoint(tablets) {
+                    @include al_padding(10px 25px);
+                    @include margin(top, 10px);
+                }
+                &:hover {
+                    @extend %btn-hover;
+                }
+            }
+        }
+    }
+}
+header.sticky.scroll-header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background: $secondary_bg_color;
+    padding: 20px 0;
+    top: 0;
+    z-index: 999;
+    @include for_breakpoint(portrait_phones) {
+        @include al_padding(5px 20px);
+    }
+    @include for_breakpoint(landscape_phones) {
+        @include al_padding(5px 20px);
+    }
+}
+/* -------------------------------
+ ---------navbar css end----------
+------------------------------- */

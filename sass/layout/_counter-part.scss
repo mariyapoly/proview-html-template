@@ -1,0 +1,88 @@
+/* -----------------------------------------
+ --------- counter-part css start ----------
+----------------------------------------- */
+.counter-part {
+    background: $primay_bg_color;
+    @include al_padding(100px 0 95px);
+    @include margin(top, -14px);
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+    @include for_breakpoint(portrait_phones) {
+        @include padding(bottom, 10px);
+    }
+    @include for_breakpoint(landscape_phones) {
+        @include padding(bottom, 10px);
+    }
+    
+    @include for_breakpoint(tablets) {
+        @include padding(bottom, 10px);
+    }
+    &__circle-shape {
+        @include position_br(absolute, -187px, -187px);
+        z-index: -1;
+    }
+    &__single-counter {
+        position: relative;
+        border: 1px solid #552B47;
+        @include border-radius(3px);
+        border-top-right-radius: 40px;
+        @include al_padding(70px 45px 45px 49px);
+        @include transition(all linear 0.3s);
+        &:hover {
+            border: 1px solid $theme_color;
+        }
+        @include for_breakpoint(portrait_phones) {
+            @include margin(bottom, 60px);
+            @include padding(top, 55px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include margin(bottom, 60px);
+            @include al_padding(50px 35px 30px);
+        }
+        
+        @include for_breakpoint(tablets) {
+            @include margin(bottom, 60px);
+            @include al_padding(50px 35px 30px);
+        }
+        @include for_breakpoint(desktops) {
+            @include al_padding(70px 19px 45px 25px);
+        }
+    }
+    &__counter-icon {
+        @include position_l(absolute, -30px, 50px);
+        width: 61px;
+        height: 61px;
+        background: $theme_color;
+        border: 1px solid $theme_color;
+        text-align: center;
+        line-height: 60px;
+        font-size: 20px;
+        @include border-radius(3px);
+      
+    }
+    &__heading {
+        font-size: $section_heading;
+        font-family: $roboto_font_family;
+        font-weight: map-get($font_weight, medium);
+        color: $white_color;
+        @include margin(bottom, 2px);
+        @include for_breakpoint(portrait_phones) {
+            font-size: 35px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            font-size: 35px;
+        }
+        @include for_breakpoint(tablets) {
+            font-size: 36px;
+        }
+    }
+    &__text {
+        font-size: 18px;
+        color: $primary_color;
+        font-family: $playfair_font_family;
+    }
+}
+/* ---------------------------------------
+ --------- counter-part css end ----------
+--------------------------------------- */

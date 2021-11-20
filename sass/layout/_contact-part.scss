@@ -1,0 +1,151 @@
+/* -----------------------------------------
+ --------- contact-part css start ----------
+----------------------------------------- */
+.contact-part {
+    background: $primay_bg_color;
+    @include al_padding(115px 0 120px);
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    @include for_breakpoint(portrait_phones) {
+        @include al_padding(75px 0);
+    }
+    @include for_breakpoint(landscape_phones) {
+        @include al_padding(75px 0);
+    }
+    @include for_breakpoint(tablets) {
+        @include al_padding(75px 0 50px);
+    }
+    &__dot-shape {
+        @include position_b(absolute, -127px, -85px);
+        z-index: -1;
+    }
+    &__section-title {
+        text-align: center;
+    } 
+    &__sub-heading {
+        @extend %section-sub-heading;
+        &::after{
+            right: -55px;
+            width: 52px;
+        }
+        @include margin(bottom, 8px);
+        @include margin(left, -60px);
+        
+    }
+    &__heading {
+        @extend %section-heading;
+        @include margin(bottom, 60px);
+        @include for_breakpoint(portrait_phones) {
+            @include margin(bottom, 30px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include margin(bottom, 30px);
+        }
+        @include for_breakpoint(tablets) {
+            @include margin(bottom, 40px);
+        }
+    }
+    &__contact-form {
+        @include for_breakpoint(portrait_phones) {
+            @include margin(bottom, 30px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include margin(bottom, 30px);
+        }
+        @include for_breakpoint(tablets) {
+            @include margin(bottom, 30px);
+        }
+        input {
+            width: 350px;
+            border: 1px solid #C1C1C1;
+            @include border-radius(4px);
+            background: no-repeat;
+            @include al_padding(15px 20px);
+            color: $white_color;
+            font-weight: map-get($font_weight, thin);
+            @include margin(bottom, 30px);
+            &::placeholder {
+                color: $white_color;
+            }
+            @include for_breakpoint(portrait_phones) {
+                width: 100%;
+                @include margin(bottom, 15px);
+            }
+            @include for_breakpoint(landscape_phones) {
+                width: 100%;
+                @include margin(bottom, 15px);
+            }
+            @include for_breakpoint(tablets) {
+                width: 100%;
+                @include margin(bottom, 15px);
+            }
+            @include for_breakpoint(desktops) {
+                width: 290px;
+            }
+        }
+        .space-left {
+            @include margin(left, 26px);
+            @include for_breakpoint(portrait_phones) {
+                @include margin(left, 0);
+            }
+            @include for_breakpoint(landscape_phones) {
+                @include margin(left, 0);
+            }
+            @include for_breakpoint(tablets) {
+                @include margin(left, 0);
+            }
+        }
+        .sub {
+            width: 100%;
+        }
+        textarea {
+            @extend input;
+            @extend .sub;
+            resize: none;
+            height: 223px;
+            @include margin(bottom, 45px);
+            @include for_breakpoint(portrait_phones) {
+                @include margin(bottom, 15px);
+                height: 130px;
+            }
+            @include for_breakpoint(landscape_phones) {
+                @include margin(bottom, 15px);
+                height: 130px;
+            }
+            @include for_breakpoint(tablets) {
+                @include margin(bottom, 20px);
+                height: 187px;
+            }
+        }
+        button {
+            @extend %btn;
+            border: none;
+            cursor: pointer;
+            @include al_padding(15px 40px);
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &__google-map {
+        iframe {
+            @include border-radius(10px);
+            @include for_breakpoint(portrait_phones) {
+                width: 100%;
+            }
+            @include for_breakpoint(landscape_phones) {
+                width: 100%;
+            }
+            @include for_breakpoint(tablets) {
+                width: 100%;
+            }
+            @include for_breakpoint(desktops) {
+                width: 100%;
+            }
+        }
+    }
+}
+/* --------------------------------------- 
+ --------- contact-part css end ----------
+---------------------------------------  */

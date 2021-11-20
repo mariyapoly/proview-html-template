@@ -1,0 +1,260 @@
+/* ---------------------------------------
+ --------- about-part css start ----------
+--------------------------------------- */
+.about-part {
+    @include al_padding(220px 0);
+    background: $secondary_bg_color;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    @include for_breakpoint(portrait_phones) {
+        @include al_padding(95px 0);
+    }
+    @include for_breakpoint(landscape_phones) {
+        @include al_padding(95px 0);
+    }
+    @include for_breakpoint(tablets) {
+        @include al_padding(95px 0 60px);
+    }
+    &__circle-shape {
+        @include position(absolute, -187px, -187px);
+    }
+    &__shape {
+        @include position_b(absolute, 0, 0);
+    }
+    &__about-left {
+        position: relative;
+        @include for_breakpoint(portrait_phones) {
+            @include margin(bottom, 40px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include margin(bottom, 40px);
+        }
+        @include for_breakpoint(tablets) {
+            @include margin(bottom, 40px);
+        }
+    }
+    &__shape-01 {
+        @include position-l(absolute, -65px, -20px);
+        z-index: -1;
+    }
+    &__sub-heading {
+        @extend %section-sub-heading;
+        &::after {
+            right: -67px;
+        }
+    }
+    &__heading {
+        @extend %section-heading;
+        @include for_breakpoint(tablets) {
+            font-size: 38px;
+        }
+    }
+    &__text {
+        color: $primary_color;
+        line-height: 28px;
+        @include margin(bottom, 30px);
+        @include for_breakpoint(portrait_phones) {
+            @include margin(bottom, 15px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include margin(bottom, 15px);
+        }
+        @include for_breakpoint(tablets) {
+            @include margin(bottom, 15px);
+        }
+    }
+    &--text-second{
+        @include margin(bottom, 45px);
+        @include for_breakpoint(portrait_phones) {
+            @include margin(bottom, 30px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include margin(bottom, 30px);
+        }
+        @include for_breakpoint(tablets) {
+            @include margin(bottom, 30px);
+        }
+    }
+    &__more-btn {
+        @extend %btn;
+        @include al_padding(20px 35px);
+        &:hover {
+            @extend %btn-hover;
+        }
+        @include for_breakpoint(portrait_phones) {
+            padding: 10px 20px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            padding: 15px 35px;
+        }
+        @include for_breakpoint(tablets) {
+            padding: 15px 35px;
+        }
+    }
+    &__video-btn {
+        color: $white_color;
+        width: 66px;
+        height: 66px;
+        background: $primay_bg_color;
+        @include border-radius(50%);
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        line-height: 65px;
+        @include margin(left, 65px);
+        @include transition(all linear 0.3s);
+        @include for_breakpoint(portrait_phones) {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            margin-left: 15px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            width: 58px;
+            height: 58px;
+            line-height: 58px;
+            margin-left: 30px;
+        }
+        @include for_breakpoint(tablets) {
+            width: 58px;
+            height: 58px;
+            line-height: 58px;
+            margin-left: 30px;
+        }
+        span {
+            @include position(absolute, 0, -108px);
+            @include transition(all linear 0.3s);
+            height: 0;
+            @include for_breakpoint(portrait_phones) {
+                right: -99px;
+            }
+            @include for_breakpoint(landscape_phones) {
+                right: -110px;
+            }
+            @include for_breakpoint(tablets) {
+                right: -110px;
+            }
+            &::after{
+                @include position-b(absolute, -48px, 0);
+                content: '';
+                @include whb(87px, 1px, $white_color);
+                @include transition(all linear 0.3s);
+                @include for_breakpoint(portrait_phones) {
+                    bottom: -42px;
+                }
+                @include for_breakpoint(landscape_phones) {
+                    bottom: -47px;
+                }
+                @include for_breakpoint(tablets) {
+                    bottom: -47px;
+                }
+            }
+        }
+        &:hover span {
+            color: $theme_color;
+        }
+        &:hover span:after{
+            @include whb(87px, 1px, $theme_color);
+        }
+        &:hover {
+            background: $theme_color;
+        }
+    }
+    &__about-right {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        @include for_breakpoint(portrait_phones) {
+            height: 365px;
+            overflow: hidden;
+        }
+        @include for_breakpoint(landscape_phones) {
+            height: 450px;
+            overflow: hidden;
+        }
+        @include for_breakpoint(tablets) {
+            height: 450px;
+            overflow: hidden;
+        }
+    }
+    &__shape-02 {
+        @include position(absolute, 40%, -110px);
+    }
+    &__about-img {
+        @include position_br(absolute, -35px, -100px);
+        z-index: 2;
+        @include for_breakpoint(portrait_phones) {
+            bottom: 32px;
+            right: 0;
+            width: 375px;
+            left: 0;
+            margin: 0 auto;
+        }
+        @include for_breakpoint(landscape_phones) {
+            bottom: 32px;
+            right: 0;
+            width: 500px;
+            left: 0;
+            margin: 0 auto;
+        }
+        @include for_breakpoint(tablets) {
+            bottom: 41px;
+            width: 461px;
+            left: -58px;
+        }
+        &:before {
+            @include position_br(absolute, 0, 90px);
+            content: '';
+            @include whb(450px, 475px, $primay_bg_color);
+            z-index: -1;
+            @include border-radius(5px);
+            @include for_breakpoint(portrait_phones) {
+                bottom: 0;
+                right: 56px;
+                width: 263px;
+                height: 304px;
+            }
+            @include for_breakpoint(landscape_phones) {
+                bottom: 0;
+                right: 72px;
+                width: 345px;
+                height: 367px;
+            }
+            @include for_breakpoint(tablets) {
+                bottom: 0;
+                right: 72px;
+                width: 305px;
+                height: 367px;
+            }
+        }
+        &::after {
+            @include position_br(absolute, -45px, 115px);
+            content: '';
+            @include whb(460px, 565px, #FF6A6A);
+            z-index: -2;
+            @include border-radius(5px);
+            @include for_breakpoint(portrait_phones) {
+                bottom: -28px;
+                right: 100px;
+                width: 243px;
+                height: 360px;
+            }
+            @include for_breakpoint(landscape_phones) {
+                bottom: -40px;
+                right: 100px;
+                width: 350px;
+                height: 438px;
+            }
+            @include for_breakpoint(tablets) {
+                bottom: -40px;
+                right: 100px;
+                width: 302px;
+                height: 438px;
+            }
+        }
+    }
+}
+/* -------------------------------------
+ --------- about-part css end ----------
+------------------------------------- */

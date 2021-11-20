@@ -1,0 +1,248 @@
+/* ---------------------------------------------
+ --------- testimonial-part css start ----------
+--------------------------------------------- */
+.testimonial-part {
+    @include margin(top, -375px);
+    z-index: 9;
+    position: relative;
+    &__testimonial-wrapper {
+        background: #F4F6FF;
+        @include border-radius(5px);
+        @include padding(top, 30px);
+        @include for_breakpoint(portrait_phones) {
+            @include al_padding(10px 0 50px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include al_padding(10px 0 50px);
+        }
+        @include for_breakpoint(tablets) {
+            @include al_padding(10px 0 0px);
+        }
+    }
+    &__testimonial-left {
+        position: relative;
+        z-index: 9;
+        text-align: center;
+        @include for_breakpoint(portrait_phones) {
+            @include margin(bottom, 30px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include margin(bottom, 30px);
+        }
+    }
+    &__circle-shape-01 {
+        @extend %testimonial-circle;
+        @include position(absolute, 220px, 48px);
+        z-index: -1;
+        @include for_breakpoint(portrait_phones) {
+            top: 134px;
+            right: 16px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            top: 134px;
+            right: 121px;
+        }
+        @include for_breakpoint(tablets) {
+            top: 155px;
+            right: 24px;
+        }
+        @include for_breakpoint(desktops) {
+            right: -6px;
+        }
+    }
+    &__circle-shape-02 {
+        @extend %testimonial-circle;
+        @include position(absolute, 32px, -8px);
+        z-index: -1;
+        opacity: 0.06;
+        @include for_breakpoint(portrait_phones) {
+            right: 5px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            right: 122px;
+            top: 54px;
+        }
+        @include for_breakpoint(tablets) {
+            right: 22px;    
+            top: 63px;
+        }
+    }
+    &__circle-shape-03 {
+        @extend %testimonial-circle;
+        @include position(absolute, 85px, 50px);
+        z-index: -1;
+        opacity: 0.06;
+        @include for_breakpoint(portrait_phones) {
+            right: 21px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            right: 74px;
+            top: 10px;
+        }
+        @include for_breakpoint(tablets) {
+            right: 0px;
+            top: 23px;
+        }
+    }
+    &__circle-shape-04 {
+        @include position(absolute, 31px, 34px);
+        z-index: -1;
+        @include for_breakpoint(portrait_phones) {
+            top: 10px;
+            right: 54px;
+            width: 230px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            top: 10px;
+            right: 123px;
+            width: 300px;       
+        }
+        @include for_breakpoint(tablets) {
+            top: 23px;
+            right: 20px;
+            width: 300px;       
+        }
+    }
+    &__circle-shape-05 {
+        @include position_br(absolute, 31px, 34px);
+        @include whb(12px, 12px, #03DAC6);
+        @include border-radius(50%);
+        @include dot-animation(swing-animation 10s alternate infinite linear);
+        animation-delay: 1s;
+    }
+    @keyframes swing-animation {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateX(-200px) rotate(-180deg));
+        } 
+    }
+    @-webkit-keyframes swing-animation {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateX(-200px) rotate(-180deg));
+        } 
+    }
+    &__testimonial-right {
+        @include for_breakpoint(portrait_phones) {
+            @include al_padding(0 15px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include al_padding(0 15px 0 20px);
+        }
+    }
+    &__quotes {
+        @include whb(58px, 58px, $theme_color);
+        @include border-radius(50%);
+        text-align: center;
+        line-height: 58px;
+        @include margin(bottom, 40px);
+        @include for_breakpoint(portrait_phones) {
+            @include margin(bottom, 20px);
+        }
+        
+        @include for_breakpoint(tablets) {
+            @include margin(bottom, 15px);
+        }
+        img {
+            display: inline-block;
+        }
+    }
+    &__sub-heading{
+        @extend %section-sub-heading;
+        color: $primay_bg_color;
+        &::after {
+            right: -70px;
+        }
+        @include for_breakpoint(tablets) {
+            @include margin(bottom, 5px);
+        }
+    }
+    &__heading {
+        @extend %section-heading;
+        color: $secondary_bg_color;
+        @include margin(bottom, 25px);
+        @include for_breakpoint(tablets) {
+            @include margin(bottom, 12px);
+            font-size: 36px;
+        }
+    }
+    &__text {
+        line-height: 28px;
+        font-style: italic;
+        color: #363636;
+        @include margin(bottom, 30px);
+        width: 470px;
+        @include for_breakpoint(portrait_phones) {
+            width: auto;
+        }
+        @include for_breakpoint(tablets) {
+            width: auto;
+            padding-right: 37px;
+        }
+        @include for_breakpoint(desktops) {
+            width: 440px;
+        }
+    }
+    &__name{
+        font-size: $section_sub_heading;
+        color: $secondary_bg_color;
+        @include margin(bottom, 10px);
+    }
+    &__designation {
+        font-weight: map-get($font_weight, thin);
+        color: $primay_bg_color;
+    }
+    ul.slick-dots {
+        position: absolute;
+        bottom: -55px;
+        left: 17px;
+        @include for_breakpoint(portrait_phones) {
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        @include for_breakpoint(landscape_phones) {
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        @include for_breakpoint(tablets) {
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+    }
+    ul.slick-dots li {
+        display: inline-block;
+        @include margin(right, 10px);
+    }
+    ul.slick-dots li button {
+        font-size: 0;
+        width: 23px;
+        height: 1px;
+        background: #707070;
+        border: 0;
+        @include border-radius(35px);
+    }
+    ul.slick-dots li.slick-active button {
+        width: 40px;
+        background: $theme_color;
+    }
+    &__slide-img.slick-slide {
+        
+        @include for_breakpoint(landscape_phones) {
+            width: 320px !important;
+            margin: 0 94px;
+        }
+    }
+    &__slide-img.slick-slide img {
+        display: inline-block;
+    }
+}
+/* -------------------------------------------
+ --------- testimonial-part css end ----------
+------------------------------------------- */
+

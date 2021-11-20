@@ -1,0 +1,102 @@
+@mixin  padding($position, $value) {
+    padding-#{$position}: $value;
+    
+}
+@mixin  al_padding($value) {
+    padding: $value;
+    
+}
+@mixin  margin($position, $value) {
+    margin-#{$position}: $value;
+    
+}
+
+@mixin  al_margin($value) {
+    margin: $value;
+    
+}
+@mixin position($pvalu1, $pvalu2, $pvalu3) {
+    position: $pvalu1;
+    top: $pvalu2;
+    right: $pvalu3;
+}
+@mixin position_l($pvalu1, $pvalu2, $pvalu3) {
+    position: $pvalu1;
+    top: $pvalu2;
+    left: $pvalu3;
+}
+@mixin position_b($pvalu1, $pvalu2, $pvalu3) {
+    position: $pvalu1;
+    bottom: $pvalu2;
+    left: $pvalu3;
+}
+
+@mixin position_br($pvalu1, $pvalu2, $pvalu3) {
+    position: $pvalu1;
+    bottom: $pvalu2;
+    right: $pvalu3;
+}
+@mixin whb($widht, $height, $bg_color) {
+    width: $widht;
+    height: $height;
+    background: $bg_color;
+}
+@mixin  transfrom($trans_value) {
+    transform: $trans_value;
+    -webkit-transform: $trans_value;
+    -moz-transform: $trans_value;
+    -ms-transform: $trans_value;
+    -o-transform: $trans_value;
+}
+@mixin transition($tansition_value) {
+    transition: $tansition_value;
+    -webkit-transition: $tansition_value;
+    -moz-transition: $tansition_value;
+    -ms-transition: $tansition_value;
+    -o-transition: $tansition_value;
+}
+@mixin border-radius($radius_vlue) {
+    border-radius: $radius_vlue;
+    -webkit-border-radius: $radius_vlue;
+    -moz-border-radius: $radius_vlue;
+    -ms-border-radius: $radius_vlue;
+    -o-border-radius: $radius_vlue;
+}
+@mixin for_breakpoint($breakpoints) {
+    $conditions : ();
+    @each $breakpoint in $breakpoints {
+        // If the key exists in the map
+        $conditions: append(
+            $conditions,
+            #{inspect(map-get($media_queries, $breakpoint))},
+            comma
+        );
+    }
+
+    @media #{$conditions} {
+        @content;
+    }
+
+}
+
+@mixin dot-animation($animaion-value) {
+    animation: $animaion-value;
+    -webkit-animation: $animaion-value;
+}
+
+@mixin for_breakpoint($breakpoints) {
+    $conditions : ();
+    @each $breakpoint in $breakpoints {
+        // If the key exists in the map
+        $conditions: append(
+            $conditions,
+            #{inspect(map-get($media_queries, $breakpoint))},
+            comma
+        );
+    }
+
+    @media #{$conditions} {
+        @content;
+    }
+
+}

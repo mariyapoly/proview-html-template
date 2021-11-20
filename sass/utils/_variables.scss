@@ -1,0 +1,30 @@
+$theme_color: #FF6F00;
+$white_color: #FFFFFF;
+$primary_color: #E9E9E9;
+
+
+$primay_bg_color: #2B2344;
+$secondary_bg_color: #1D1730;
+
+$roboto_font_family: 'Roboto', sans-serif;;
+$playfair_font_family: 'Playfair Display', serif;
+
+$font_weight: (
+    "regular": 400,
+    "thin": 300,
+    "medium": 500,
+    "bold": 700,
+);
+
+$body_font_size: 16px;
+$section_title: 52px;
+$section_heading: 46px;
+$section_sub_heading: 24px;
+
+$media_queries : (
+    'portrait_phones'    : "only screen and (max-width: 575px)",
+    'landscape_phones'   : "only screen and (min-width: 576px) and (max-width: 767px)",
+    'tablets'            : "only screen and (min-width: 768px) and (max-width: 991px)",
+    'desktops'           : "only screen and (min-width: 992px) and (max-width: 1199px)",
+    'large_desktops'     : "only screen and (min-width: 1200px) and (max-width: 1500px)",
+);

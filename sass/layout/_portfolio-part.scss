@@ -1,0 +1,168 @@
+/* ------------------------------------------
+ --------- portfolio-part css start ----------
+------------------------------------------- */
+.portfolio-part {
+    background: $primay_bg_color;
+    @include al_padding(120px 0 490px);
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    @include for_breakpoint(portrait_phones) {
+        @include al_padding(75px 0 450px);
+    }
+    @include for_breakpoint(landscape_phones) {
+        @include al_padding(75px 0 450px);
+    }
+    @include for_breakpoint(tablets) {
+        @include al_padding(75px 0 450px);
+    }
+    &__circle-white {
+        @include position(absolute, -187px, -187px);
+        z-index: -1;
+    }
+    &__dots {
+        @include position_l(absolute, 735px, 40px);
+        z-index: -1;
+    }
+    &__dot-shape {
+        @include position_br(absolute, 0, -169px);
+        z-index: -1;
+    }
+    &__subheading {
+        @extend %section-sub-heading;
+        @include margin(bottom, 10px);
+        &::after {
+            right: -55px;
+        }
+    }
+    &__heading  {
+        @extend %section-heading;
+    }
+    &__text {
+        line-height: 28px;
+        color: $primary_color;
+        width: 410px;
+        @include for_breakpoint(portrait_phones) {
+            width: auto;
+        }
+    }
+    &__mixi-btn {
+        @include for_breakpoint(portrait_phones) {
+            @include margin(top, 30px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include margin(top, 30px);
+        }
+        @include for_breakpoint(tablets) {
+            @include margin(top, 30px);
+        }
+        ul {
+            background: $secondary_bg_color;
+            @include border-radius(5px);
+            @include for_breakpoint(portrait_phones) {
+                background: no-repeat;
+            }
+            @include for_breakpoint(landscape_phones) {
+                background: no-repeat;
+            }
+            li {
+                display: inline-block;
+                @include al_padding(20px 31.9px);
+                background: $secondary_bg_color;
+                color: $primary_color;
+                position: relative;
+                cursor: pointer;
+                &::after{
+                    @include position(absolute, 20px, 0);
+                    @include whb(1px, 36px, $primay_bg_color);
+                    content: '';
+                    @include for_breakpoint(portrait_phones) {
+                        width: 0;
+                    }
+                    @include for_breakpoint(landscape_phones) {
+                        width: 0;
+                    }
+                }
+                &:first-child{
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+                &:last-child{
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+                @include for_breakpoint(portrait_phones) {
+                    @include al_padding(8px 14.9px);
+                    @include al_margin(15px 5px 0);
+                    @include border-radius(5px);
+                }
+                @include for_breakpoint(landscape_phones) {
+                    @include al_padding(10px 13.9px);
+                    @include al_margin(15px 5px 0);
+                    @include border-radius(5px);
+                }
+                @include for_breakpoint(tablets) {
+                    @include al_padding(20px 37.4px);
+                }
+                @include for_breakpoint(desktops) {
+                    @include al_padding(20px 21.4px);
+                }
+            }
+            .mixitup-control-active {
+                background: $theme_color !important;
+                position: relative;
+                &::after{
+                    @include position(absolute, 20px, 0);
+                    @include whb(1px, 36px, $theme_color);
+                    content: '';
+                    @include for_breakpoint(portrait_phones) {
+                        width: 0;
+                    }
+                    @include for_breakpoint(landscape_phones) {
+                        width: 0;
+                    }
+                }
+                &::before{
+                    @include position_b(absolute, -4px, 0);
+                    right: 0;
+                    margin: 0 auto;
+                    @include whb(18px, 12px, $theme_color);
+                    content: '';
+                    @include transfrom(rotate(45deg));
+                }
+            }
+        }
+    }
+    &__single-portfolio {
+        @include margin(top, 45px);
+        @include for_breakpoint(portrait_phones) {
+            @include margin(top, 30px);
+            text-align: center;
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include margin(top, 30px);
+            text-align: center;
+        }
+    }
+    &__product-title {
+        color: $white_color;
+        font-size: $section_sub_heading;
+        @include margin(top, 25px);
+        @include for_breakpoint(portrait_phones) {
+            font-size: 22px;
+            @include margin(top, 15px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            font-size: 22px;
+            @include margin(top, 15px);
+        }
+    }
+    &__product-sub-title {
+        color: $primary_color;
+        font-weight: map-get($font_weight, thin);
+        @include margin(top, 10px);
+    }
+}
+/* -----------------------------------------
+ --------- portfolio-part css end ----------
+----------------------------------------- */

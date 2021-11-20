@@ -1,0 +1,227 @@
+/* ----------------------------------------
+ --------- footer-part css start ----------
+---------------------------------------- */
+.footer-part {
+    background: $secondary_bg_color;
+    text-align: center;
+    @include al_padding(135px 0 25px);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    z-index: 9;
+    &__dot-shapes {
+        @include position_l(absolute, -127px, -85px);
+        z-index: -1;
+    }
+    
+    &__dot-shape {
+        @include position(absolute, 35px, 0);
+        left: 0;
+        margin: 0 auto;
+        z-index: -1;
+    }
+    &__footer-widget {
+        margin-top: -25px;
+        position: relative;
+    }
+    &__footer-heading {
+        font-size: $section_title;
+        color: $white_color;
+        @include margin(bottom, 15px);
+        @include for_breakpoint(portrait_phones) {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        @include for_breakpoint(tablets) {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+    }
+    &__email {
+        font-size: $section_sub_heading;
+        color: $white_color;
+        @include margin(bottom, 80px);
+        @include for_breakpoint(portrait_phones) {
+            font-size: $body_font_size;
+            @include margin(bottom, 40px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            font-size: $body_font_size;
+            @include margin(bottom, 40px);
+        }
+        @include for_breakpoint(tablets) {
+            font-size: 18px;
+            @include margin(bottom, 40px);
+        }
+    }
+    &__footer-social {
+        @include margin(bottom, 125px);
+        a {
+            width: 46px;
+            height: 46px;
+            @include border-radius(50%);
+            text-align: center;
+            line-height: 46px;
+            display: inline-block;
+            @include al_margin(0 10px);
+        }
+    }
+    &__facebook {
+        background: #1976D2;
+    }
+    &__dribbble {
+        background: #D04C7D;
+    }
+    &__behance {
+        background: #1769FF;
+    }
+    &__copy-right {
+        border-top: 1px solid #3B3158;
+        @include padding(top, 30px);
+        position: relative;
+    }
+    &__copy-text {
+        color: $primary_color;
+        font-weight: map-get($font_weight, thin);
+    }
+    &__dot-shapes-02 {
+        @include position_br(absolute, 13px, -140px);
+        
+    }
+    &__circle-shape-01 {
+        @include whb(168px, 168px, #EE6D52);
+        @include border-radius(50%);
+        @include position_b(absolute, -126px, 60px);
+        @include for_breakpoint(portrait_phones) {
+            width: 100px;
+            height: 100px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            width: 100px;
+            height: 100px;
+        }
+        @include for_breakpoint(tablets) {
+            width: 120px;
+            height: 120px;
+        }
+    }
+    &__circle-shape-02 {
+        @include position_b(absolute, -100px, 88px);
+        @include for_breakpoint(portrait_phones) {
+            width: 100px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            width: 100px;
+        }
+        @include for_breakpoint(tablets) {
+            width: 120px;
+        }
+    }
+    &__circle-shape-03 {
+        @include whb(27px, 27px, #FF6A71);
+        @include border-radius(50%);
+        @include position(absolute, -30px, 290px);
+        @include dot-animation(swing-anima 15s alternate infinite linear);
+        animation-delay: 1s;
+    }
+    @keyframes swing-anima {
+        0%,
+        100% {
+            @include transfrom(translate(20px, 0px));
+        }
+        20% {
+            @include transfrom(translate(40px, -5px));
+        }
+        40% {
+            @include transfrom(translate(100px, 40px));
+        }
+        60% {
+          @include transfrom(translate(40px, 100px));
+         }
+        80% {
+          @include transfrom(translate(-80px, 40px));
+         }
+        100% {
+          transform: translate(0px, 0px); } 
+    }
+    &__shape-02 {
+        @include position_l(absolute, 240px, 290px);
+        @include dot-animation(swing-anim 10s cubic-bezier(0.4, 0, 0.2, 1) infinite);
+    }
+    @keyframes swing-anim {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateY(-60px) rotate(-75deg));
+        } 
+    }
+    @-webkit-keyframes swing-anim {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateY(-60px) rotate(-75deg));
+        } 
+    }
+    &__shape-03 {
+        @include position_l(absolute, -20px, 60px);
+        @include dot-animation(swing-ani 10s cubic-bezier(0.4, 0, 0.2, 1) infinite);
+    }
+    @keyframes swing-ani {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateX(-85px) rotate(-75deg));
+        } 
+    }
+    @-webkit-keyframes swing-ani {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateX(-85px) rotate(-75deg));
+        } 
+    }
+    &__shape-04 {
+        @include position_br(absolute, -125px, 0);
+        @include dot-animation(swing-animation 10s alternate infinite linear);
+        animation-delay: 1s;
+    }
+    @keyframes swing-animation {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateX(-200px) rotate(-180deg));
+        } 
+    }
+    @-webkit-keyframes swing-animation {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateX(-200px) rotate(-180deg));
+        } 
+    }
+    
+}
+/* --------------------------------------
+ --------- footer-part css end ----------
+-------------------------------------- */
+/* -------------------------------------
+ --------- scrollUp css start ----------
+------------------------------------- */
+#scrollUp {
+    width: 40px;
+    height: 40px;
+    background: $theme_color;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 4px;
+    transition: .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+/* -----------------------------------
+ --------- scrollUp css end ----------
+----------------------------------- */

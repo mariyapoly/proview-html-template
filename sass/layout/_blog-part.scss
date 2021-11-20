@@ -1,0 +1,107 @@
+/* --------------------------------------
+ --------- blog-part css start ----------
+-------------------------------------- */
+.blog-part {
+    background: $secondary_bg_color;
+    @include al_padding(490px 0 115px);
+    @include margin(top, -373px);
+    position: relative;
+    overflow: hidden;
+    @include for_breakpoint(portrait_phones) {
+        padding: 885px 0 50px;
+        margin-top: -808px;
+    }
+    @include for_breakpoint(landscape_phones) {
+        @include al_padding(685px 0 50px);
+        @include margin(top, -609px);
+    }
+    &__dot-shape {
+        @include position(absolute, 0, -169px);
+    }
+    &__circle-shape {
+        @include whb(27px, 27px, #FF6A71);
+        @include border-radius(50%);
+        @include position_l(absolute, 140px, 20px);
+        @include dot-animation(swing-anima 15s alternate infinite linear);
+        animation-delay: 1s;
+    }
+    @keyframes swing-anima {
+        0%,
+        100% {
+            @include transfrom(translate(20px, 0px));
+        }
+        20% {
+            @include transfrom(translate(60px, -5px));
+        }
+        40% {
+            @include transfrom(translate(100px, 80px));
+        }
+        60% {
+          @include transfrom(translate(120px, 80px));
+         }
+        80% {
+          @include transfrom(translate(-80px, 40px));
+         }
+        100% {
+          transform: translate(0px, 0px); } 
+    }
+    &__section-title {
+        text-align: center;
+    }
+    &__subheading {
+        @extend %section-sub-heading;
+        &::after{
+            right: -55px;
+            width: 52px;
+        }
+        @include margin(bottom, 10px);
+        @include margin(left, -60px);
+        
+    }
+    &__heading {
+        @extend %section-heading;
+        @include margin(bottom, 50px);
+    }
+    &__single-blog {
+        @include margin(bottom, 30px);
+        @include for_breakpoint(portrait_phones) {
+            text-align: center;
+        }
+        @include for_breakpoint(landscape_phones) {
+            text-align: center;
+        }
+        @include for_breakpoint(tablets) {
+            text-align: center;
+        }
+    }
+    &__date {
+        font-weight: map-get($font_weight, thin);
+        color: $primary_color;
+        @include margin(bottom, 5px);
+        @include margin(top, 25px);
+        @include for_breakpoint(portrait_phones) {
+            @include margin(top, 15px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include margin(top, 15px);
+        }
+        @include for_breakpoint(tablets) {
+            @include margin(top, 15px);
+        }
+    }
+    &__text {
+        color: $white_color;
+        font-size: $section_sub_heading;
+        line-height: 32px;
+        @include for_breakpoint(portrait_phones) {
+            font-size: 21px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            font-size: 24px;
+            @include al_padding(0 70px);
+        }
+    }
+}
+/* ------------------------------------
+ --------- blog-part css end ----------
+------------------------------------ */

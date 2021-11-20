@@ -1,0 +1,341 @@
+/* ----------------------------------------
+ --------- banenr-part css start ----------
+---------------------------------------- */
+.banner-part {
+    background: url(../images/banner/banner-bg.png) no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+    @include al_padding(315px 0 80px);
+    position: relative;
+    @include for_breakpoint(portrait_phones) {
+        padding: 180px 0 379px;
+        text-align: center;
+    }
+    @include for_breakpoint(landscape_phones) {
+        padding: 180px 0 459px;
+        text-align: center;
+    }
+    @include for_breakpoint(tablets) {
+        padding: 220px 0 50px;
+    }
+    &__shape {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        @include transfrom(translateY(-50%));
+    }
+    &__position {
+        position: relative;
+        z-index: 9;
+    }
+    &__content {
+        position: relative;
+        z-index: 999;
+    } 
+    &__heading {
+        font-size: 30px;
+        color: $primary_color;
+        @include margin(bottom, 5px);
+        @include for_breakpoint(portrait_phones) {
+            font-size: 20px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            font-size: 24px;
+        }
+        
+        @include for_breakpoint(tablets) {
+            font-size: 24px;
+        }
+    }
+    &__subheading {
+        font-size: 72px;
+        color: $white_color;
+        @include for_breakpoint(portrait_phones) {
+            font-size: 45px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            font-size: 52px;
+        }
+        @include for_breakpoint(tablets) {
+            font-size: 52px;
+        }
+        @include for_breakpoint(desktops) {
+            font-size: 85px;
+        }
+    }
+    &-pera {
+        font-size: 18px;
+        color: $primary_color;
+        @include al_margin(8px 0 35px);
+    }
+    &__download-btn {
+        @extend %btn;
+        @include al_padding(20px 30px);
+        &:hover {
+            @extend %btn-hover;
+        }
+        @include for_breakpoint(portrait_phones) {
+            @include al_padding(10px 20px);
+        }
+        
+        @include for_breakpoint(landscape_phones) {
+            @include al_padding(15px 20px);
+        }
+        @include for_breakpoint(tablets) {
+            @include al_padding(15px 20px);
+        }
+    }
+    &__contact-btn {
+        @extend %btn;
+        background: $primay_bg_color;
+        @include al_padding(20px 55px);
+        @include margin(left, 15px);
+        &:hover {
+            background: $theme_color;
+            color: $white_color;
+        }
+        @include for_breakpoint(portrait_phones) {
+            @include al_padding(10px 45px);
+            @include al_margin(15px 0 0 0);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include al_padding(15px 45px);
+            @include margin(left, 10px);
+        }
+        @include for_breakpoint(tablets) {
+            @include al_padding(15px 45px);
+            @include margin(left, 10px);
+        }
+    }
+    &__social-heading {
+        color: $white_color;
+        text-transform: capitalize;
+        @include margin(bottom, 10px);
+    }
+    &__social {
+        @include margin(top, 215px);
+        @include for_breakpoint(portrait_phones) {
+            @include margin(top, 20px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include margin(top, 20px);
+        }
+        
+        @include for_breakpoint(tablets) {
+            @include margin(top, 55px);
+        }
+        a {
+            width: 40px;
+            height: 40px;
+            background: $primay_bg_color;
+            text-align: center;
+            line-height: 40px;
+            @include border-radius(5px);
+            display: inline-block;
+            @include margin(right, 10px);
+            @include transition(all linear 0.3s);
+            &:hover {
+                background: $theme_color
+            }
+        }
+    }
+    &__banner-img {
+        @include position_br(absolute, -66px, -305px);
+        z-index: 99;
+        @include for_breakpoint(portrait_phones) {
+            bottom: -365px;
+            right: -84px;
+            width: 500px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            bottom: -445px;
+            right: 0;
+            width: 600px;
+            left: 0;
+            margin: 0 auto;
+        }
+        @include for_breakpoint(tablets) {
+            bottom: -37px;
+            right: -137px;
+            width: 665px;
+        }
+    }
+    &__shape-01 {
+        @extend %banner-circle;
+        @include position_br(absolute, -66px, 10px);
+        z-index: -1;
+        @include for_breakpoint(portrait_phones) {
+            bottom: -359px;
+            right: 51px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            bottom: -445px;
+            right: 99px;
+        }
+        
+        @include for_breakpoint(tablets) {
+            bottom: -28px;
+            right: 43px;
+        }
+    }
+    &__shape-02 {
+        @extend %banner-circle;
+        @include position_br(absolute, 175px, -139px);
+        opacity: 0.05;
+        @include for_breakpoint(portrait_phones) {
+            bottom: -285px;
+            right: 45px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            bottom: -360px;
+            right: 68px;
+        }
+        @include for_breakpoint(tablets) {
+            bottom: 33px;
+            right: 45px;
+        }
+    }
+    &__shape-03 {
+        @include position_br(absolute, 175px, -139px);
+        @include for_breakpoint(portrait_phones) {
+            bottom: -269px;
+            right: 10px;
+            width: 230px;
+            height: 230px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            bottom: -330px;
+            right: 33px;
+            width: 280px;
+            height: 280px;
+        }
+        @include for_breakpoint(tablets) {
+            bottom: 85px;
+            right: 0;
+            width: 305px;
+            height: 305px;
+        }
+    }
+    &__shape-04 {
+        @extend %banner-circle;
+        @include position_br(absolute, 104px, -50px);
+        opacity: 0.05;
+        @include for_breakpoint(portrait_phones) {
+            bottom: -269px;
+            right: 10px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            bottom: -330px;
+            right: 33px;            
+        }
+        @include for_breakpoint(tablets) {
+            bottom: 84px;
+            right: 0;            
+        }
+    }
+    &__shape-05 {
+        @include position(absolute, -115px, 100px);
+        width: 27px;
+        height: 27px;
+        background: #FF6A71;
+        @include border-radius(50%);
+        @include dot-animation(swing-anim 10s cubic-bezier(0.4, 0, 0.2, 1) infinite);
+    }
+    @keyframes swing-anim {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateY(-48px) rotate(-75deg));
+        } 
+    }
+    @-webkit-keyframes swing-anim {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateY(-48px) rotate(-75deg));
+        } 
+    } 
+    &__shape-06 {
+        @include position(absolute, 17%, 38%);
+        width: 12px;
+        height: 12px;
+        background: #03DAC6;
+        @include border-radius(50%);
+        @include dot-animation(swing-ani 10s cubic-bezier(0.4, 0, 0.2, 1) infinite);
+    }
+    @keyframes swing-ani {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateX(-40px) rotate(-75deg));
+        } 
+    }
+    @-webkit-keyframes swing-ani {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateX(-40px) rotate(-75deg));
+        } 
+    }
+    &__shape-07 {
+        @include position(absolute, -23%, 42%);
+        @include dot-animation(swing-anima 15s alternate infinite linear);
+        animation-delay: 1s;
+    }
+    @keyframes swing-anima {
+        0%,
+        100% {
+            @include transfrom(translate(20px, 0px));
+        }
+        20% {
+            @include transfrom(translate(20px, -5px));
+        }
+        40% {
+            @include transfrom(translate(80px, 10px));
+        }
+        60% {
+          @include transfrom(translate(40px, 100px));
+         }
+        80% {
+          @include transfrom(translate(-20px, 40px));
+         }
+        100% {
+          transform: translate(0px, 0px); } 
+    }
+    &__shape-08 {
+        @include position(absolute, 2%, 5%);
+        @include dot-animation(swing-animat 2s infinite linear);
+    }
+    @keyframes swing-animat {
+        from {
+            @include transfrom(rotate(0deg));
+        }
+        to {
+            @include transfrom(rotate(359deg));
+        }
+    }
+    @-webkit-keyframes swing-ani {
+        from {
+            @include transfrom(rotate(0deg));
+        }
+        to {
+            @include transfrom(rotate(359deg));
+        }
+    }
+    &__shape-09 {
+        @include position(absolute, 21%, 0);
+        @include dot-animation(swing-animation 10s alternate infinite linear);
+        animation-delay: 1s;
+    }
+    @keyframes swing-animation {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateX(-80px) rotate(-180deg));
+        } 
+    }
+    @-webkit-keyframes swing-animation {
+        75% {
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          @include transfrom(translateX(-80px) rotate(-180deg));
+        } 
+    }
+}
+/* --------------------------------------
+ --------- banner-part css end ----------
+-------------------------------------- */

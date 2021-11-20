@@ -1,0 +1,186 @@
+/* -----------------------------------------------
+ --------- qualification-part css start ----------
+----------------------------------------------- */
+.qualification-part {
+    background: $primay_bg_color;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    @include al_padding(115px 0 90px);
+    @include for_breakpoint(portrait_phones) {
+        @include al_padding(75px 0 50px);
+    }
+    @include for_breakpoint(landscape_phones) {
+        @include al_padding(75px 0 50px);
+    }
+    @include for_breakpoint(tablets) {
+        @include al_padding(75px 0 50px);
+    }
+    &__section-title {
+        text-align: center;
+    }
+    &__subheading {
+        @extend %section-sub-heading;
+        @include margin(left, -60px);
+    }
+    &__heading {
+        @extend %section-heading;
+        @include margin(bottom, 50px);
+        @include for_breakpoint(portrait_phones) {
+            @include margin(bottom, 20px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include margin(bottom, 20px);
+        }
+        @include for_breakpoint(tablets) {
+            @include margin(bottom, 20px);
+        }
+    }
+    &__qualification-heading {
+        color: $white_color;
+        font-size: 36px;
+        display: inline-block;
+        position: relative;
+        text-transform: capitalize;
+        @include margin(bottom, 45px);
+        &::after {
+            @include position_br(absolute, 6px, -120px);
+            content: '';
+            background: url(../images/icon/dots.png) no-repeat center;
+            width: 100%;
+            height: 20%;
+        }
+        @include for_breakpoint(portrait_phones) {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        
+        @include for_breakpoint(landscape_phones) {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        @include for_breakpoint(tablets) {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+    &--dot {
+        &::after {
+            right: -125px;
+        }
+    }
+    &--dots {
+        &::after {
+            right: -109px;
+        }
+    }
+    &__qualification-item {
+        background: $secondary_bg_color;
+        @include margin(bottom, 30px);
+        @include al_padding(30px 20px 25px 40px);
+        @include border-radius(5px);
+        @include for_breakpoint(portrait_phones) {
+            @include al_padding(25px 20px 25px 25px);
+        }
+    }
+    &--wrapper {
+        display: flex;
+    }
+    &__qualification-icon {
+        width: 22%;
+    }
+    &__qualification-img {
+        @include whb(56px, 56px, $theme_color);
+        @include border-radius(50%);
+        text-align: center;
+        line-height: 55px;
+    }
+    &__experience {
+        width: 78%;
+        @include margin(left, 10px);
+    }
+
+    &__item-heading {
+        @extend %qualification-heading;
+        @include margin(bottom, 2px);
+    }
+    &__item-text {
+        color: $theme_color;
+        @include margin(bottom, 7px);
+    }
+    &__item-date {
+        @extend %qualification-date;
+    }
+    &__experience-heading {
+        @extend %qualification-heading;
+        @include margin(bottom, 10px);
+        @include for_breakpoint(portrait_phones) {
+            font-size: 21px;
+        }
+        @include for_breakpoint(landscape_phones) {
+            font-size: 21px;
+        }
+        @include for_breakpoint(tablets) {
+            font-size: 21px;
+        }
+    }
+    &__experience-pera {
+        color: #DEDEDE;
+        .space-right {
+            @include margin(right, 20px);
+            position: relative;
+            &::after{
+                @include position_br(absolute, 6px, -12px);
+                content: '';
+                width: 4px;
+                height: 4px;
+                background: $white_color;
+                @include border-radius(50%);
+            }
+        }
+    }
+    &__experience-date {
+        @extend %qualification-date;
+    }
+    &__skill-list {
+        li {
+            color: $primary_color;
+            position: relative;
+            @include padding(left, 20px);
+            @include margin(bottom, 25px);
+            &::before{
+                @include position_l(absolute, 50%, 0);
+                @include transfrom(translateY(-50%));
+                content: '';
+                @include whb(4px, 4px, $theme_color);
+                @include border-radius(50%);
+
+            }
+            &:last-child{
+                @include margin(bottom, 15px);
+                @include for_breakpoint(portrait_phones) {
+                    @include margin(bottom, 0);
+                }
+            }
+            @include for_breakpoint(portrait_phones) {
+                margin-bottom: 15px;
+            }
+            @include for_breakpoint(landscape_phones) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &__single-qualification {
+        position: relative;
+    }
+    &__dot-shape {
+        @include position_br(absolute, -43%, -75%);
+    }
+    &__circle-shape {
+        @include position-b(absolute, -187px, -187px);
+        z-index: -1;
+    }
+}
+/* ---------------------------------------------
+ --------- qualification-part css end ----------
+--------------------------------------------- */

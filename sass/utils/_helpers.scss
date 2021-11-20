@@ -1,0 +1,89 @@
+%btn {
+    background: $theme_color;
+    color: $white_color;
+    text-transform: capitalize;
+    display: inline-block;
+    @include al_padding(15px 30px);
+    @include border-radius(5px);
+    @include transition(all linear 0.3s);
+}
+%btn-hover {
+    background: $primay_bg_color;
+    color: $white_color;
+}
+%banner-circle {
+    width: 555px;
+    height: 555px;
+    background: #EE6D52;
+    @include border-radius(50%);
+    @include for_breakpoint(portrait_phones) {
+        width: 230px;
+        height: 230px;
+    }
+    @include for_breakpoint(landscape_phones) {
+        width: 280px;
+        height: 280px;
+    }
+    @include for_breakpoint(tablets) {
+        width: 305px;
+        height: 305px;
+    }
+}
+%section-sub-heading {
+    font-size: $body_font_size;
+    font-style: italic;
+    @include margin(bottom, 15px);
+    color: $white_color;
+    display: inline-block;
+    position: relative;
+    text-transform: capitalize;
+    &::after {
+        @include position(absolute, 63%, -78px);
+        content: '';
+        background: url(../images/icon/dots.png) no-repeat center;
+        width: 100%;
+        height: 20%;
+    }
+}
+%section-heading {
+    font-size: $section_title;
+    color: $white_color;
+    @include margin(bottom, 30px);
+    text-transform: capitalize;
+    @include for_breakpoint(portrait_phones) {
+        font-size: 32px;
+        @include margin(bottom, 20px);
+    }
+    @include for_breakpoint(landscape_phones) {
+        font-size: 32px;
+        @include margin(bottom, 20px);
+    }
+    @include for_breakpoint(tablets) {
+        font-size: 40px;
+        @include margin(bottom, 20px);
+    }
+}
+%qualification-heading {
+    font-size: $section_sub_heading;
+    color: $primary_color;
+}
+%qualification-date {
+    color: $primary_color;
+    font-weight: map-get($font_weight, thin);
+}
+%testimonial-circle{
+    @include whb(457px, 457px, #EE6D52);
+    @include border-radius(50%);
+    @include for_breakpoint(portrait_phones) {
+        width: 270px;
+        height: 270px;
+    }
+    @include for_breakpoint(landscape_phones) {
+        width: 300px;
+        height: 300px;
+    }
+    @include for_breakpoint(tablets) {
+        width: 300px;
+        height: 300px;
+    }
+}

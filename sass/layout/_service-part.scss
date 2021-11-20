@@ -1,0 +1,88 @@
+/* -----------------------------------------
+ --------- service-part css start ----------
+----------------------------------------- */
+.service-part {
+    background: $secondary_bg_color;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    @include al_padding(115px 0 120px);
+    @include for_breakpoint(portrait_phones) {
+        @include al_padding(75px 0 80px);
+    }
+    @include for_breakpoint(landscape_phones) {
+        @include al_padding(75px 0 80px);
+    }
+    @include for_breakpoint(tablets) {
+        @include al_padding(75px 0 80px);
+    }
+    &__circle-shape {
+        @include position_l(absolute, -187px, -187px);
+        z-index: -1;
+    }
+    &__circle-white {
+        @include position_br(absolute, -187px, -187px);
+        z-index: -1;
+    }
+    &__section-title {
+        text-align: center;
+    }
+    &__subheading {
+        @extend %section-sub-heading;
+        @include margin(bottom, 10px);
+        &::after {
+            right: -60px;
+        }
+        @include margin(left, -60px);
+        
+    }
+    &__heading {
+        @extend %section-heading;
+        @include margin(bottom, 5px);
+    }
+    &__single-service {
+        background: $primay_bg_color;
+        @include border-radius(3px);
+        border-top-right-radius: 60px;
+        @include al_padding(90px 40px 40px 45px);
+        position: relative;
+        @include margin(top, 95px);
+        @include for_breakpoint(portrait_phones) {
+            @include al_padding(75px 25px 25px 30px);
+        }
+        @include for_breakpoint(tablets) {
+            @include al_padding(85px 30px 40px 35px);
+        }
+        @include for_breakpoint(desktops) {
+            @include al_padding(90px 10px 40px 20px); 
+        }
+    }
+    &__service-img {
+        @include whb(90px, 90px, $theme_color);
+        text-align: center;
+        line-height: 90px;
+        @include border-radius(5px);
+        @include position_l(absolute, -45px, 45px);
+        @include for_breakpoint(tablets) {
+            left: 35px;
+        }
+    }
+    &__service-title {
+        font-size: $section_sub_heading;
+        color: $white_color;
+        @include margin(bottom, 25px);
+        @include for_breakpoint(portrait_phones) {
+            @include margin(bottom, 17px);
+        }
+        @include for_breakpoint(landscape_phones) {
+            @include margin(bottom, 17px);
+        }
+    }
+    &__service-text {
+        color: $primary_color;
+        line-height: 28px;
+    }
+}
+/* ---------------------------------------
+ --------- service-part css end ----------
+--------------------------------------- */

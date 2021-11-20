@@ -1,0 +1,33 @@
+  
+/*  --------------------------------------
+*         Table of Content
+*  --------------------------------------
+*  01. navbar
+*  02. bannar-part
+*  03. counter-part
+*  04. about-part
+*  05. qualification-part
+*  06. service-part
+*  07. portfolio-part
+*  08. testimonial-part
+*  09. blog-part
+*  10. contact-part
+*  11. footer-part
+*  --------------------------------------
+*  -------------------------------------- */
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/helpers';
+@import './base/typography';
+@import './base/reset';
+@import './layout/navigation';
+@import './layout/banner-part';
+@import './layout/counter-part';
+@import './layout/about-part';
+@import './layout/qualification-part';
+@import './layout/service-part';
+@import './layout/portfolio-part';
+@import './layout/testimonial-part';
+@import './layout/blog-part';
+@import './layout/contact-part';
+@import './layout/footer-part';
